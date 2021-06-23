@@ -1,0 +1,15 @@
+<h2>New Item</h2>
+
+<%= simple_form_for @item do |f| %>
+  <div class="form-inputs">
+    <%= f.input :name,
+                required: false,
+                autofocus: true %>
+    <%= f.input :amount,
+                required: false %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Add Item" %>
+  </div>
+<% end %>

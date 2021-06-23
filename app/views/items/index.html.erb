@@ -1,0 +1,25 @@
+<h1>Hello</h1>
+<ul class="nav d-flex">
+  <li class="nav-item">
+    <%= link_to 'Sign in', user_session_path %>
+  </li>
+  <li class="nav-item">
+    <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+  </li>
+</ul>
+<div>
+  <ul>
+    <% @item.each do |item| %>
+      <li class="list-unstyled px-5">
+        <% if user_signed_in? %>
+        <h3>Name: </h3>
+        <%= item.name %>
+        <% end %>
+        <br><br>
+        <h4>Amount: </h4>
+        <%= item.amount %>
+        <br><br>
+      </li>
+    <% end %>
+  </ul>
+</div>
