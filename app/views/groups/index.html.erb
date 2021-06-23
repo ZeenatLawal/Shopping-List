@@ -1,14 +1,14 @@
-<h1>Items</h1>
+<h1>Groups</h1>
 <div>
   <ul>
-    <% @item.each do |item| %>
+    <% @group.each do |group| %>
       <li class="list-unstyled px-5">
         <% if user_signed_in? %>
           <h3>Name: </h3>
-          <%= item.name %>
+          <%= group.name %>
           <br><br>
-          <h4>Amount: </h4>
-          <%= item.amount %>
+          <h4>Icon: </h4>
+          <%= group.icon %>
         <% end %>
         <br><br>
       </li>
