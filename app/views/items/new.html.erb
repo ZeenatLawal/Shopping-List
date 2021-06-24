@@ -7,6 +7,7 @@
                 autofocus: true %>
     <%= f.input :amount,
                 required: false %>
+    <%= f.association :group, collection: Group.order(:name), prompt: "Choose a Category" %>
   </div>
 
   <div class="form-actions">

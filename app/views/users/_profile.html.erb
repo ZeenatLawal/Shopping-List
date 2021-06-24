@@ -1,0 +1,17 @@
+
+  <ul class="nav d-flex flex-column">
+    <li><%= gravatar_image_tag(current_user.email, alt: 'Profile Picture', class: ' rounded rounded-circle my-4 ') %></li>
+    <li><%= @user.name %></li>
+    <li class="nav-item">
+      <%= link_to 'My Shopping List', items_path %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'All Categories', groups_path %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'Ungrouped Items', groups_path %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+    </li>
+</ul>

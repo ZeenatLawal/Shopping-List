@@ -12,20 +12,6 @@
   </head>
 
   <body>
-    <ul class="nav d-flex justify-content-around">
-      <li class="nav-item">
-        <%= link_to 'Items', items_path %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Groups', groups_path %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Sign in', user_session_path %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
-      </li>
-    </ul>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
