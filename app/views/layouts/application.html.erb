@@ -12,12 +12,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="bg-light">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= link_to root_path do %>
-      <span class="fas fa-bars"></span>
-    <% end %>
     <%= yield %>
   </body>
 </html>
