@@ -1,7 +1,8 @@
 class ItemsController < ApplicationController
 
   def index
-    @item = Item.all
+    @item = current_user.items
+    @amount_sum = current_user.items.sum(:amount)
   end
 
   def new

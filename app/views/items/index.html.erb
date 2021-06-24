@@ -1,15 +1,26 @@
 <h1>Items</h1>
+<ul class="nav d-flex justify-content-around">
+    <li class="nav-item">
+      <%= link_to 'My Shopping List', items_path %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'Ungrouped Items', groups_path %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'All Categories', groups_path %>
+    </li>
+</ul>
 <div>
   <ul>
+   <h3>Total Amount: </h3>
+   <%= @amount_sum %>
     <% @item.each do |item| %>
       <li class="list-unstyled px-5">
-        <% if user_signed_in? %>
           <h3>Name: </h3>
           <%= item.name %>
           <br><br>
           <h4>Amount: </h4>
           <%= item.amount %>
-        <% end %>
         <br><br>
       </li>
     <% end %>

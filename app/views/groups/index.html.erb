@@ -1,9 +1,19 @@
-<h1>Groups</h1>
+<h1>Categories</h1>
+<ul class="nav d-flex justify-content-around">
+    <li class="nav-item">
+      <%= link_to 'My Shopping List', items_path %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'Ungrouped Items', groups_path %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'All Categories', groups_path %>
+    </li>
+</ul>
 <div>
   <ul>
     <% @group.each do |group| %>
       <li class="list-unstyled px-5">
-        <% if user_signed_in? %>
           <h3>Name: </h3>
           <%= group.name %>
           <br><br>
@@ -11,7 +21,6 @@
           <%= group.icon %>
           <h4>Items: </h4>
           <%= group.items.count %>
-        <% end %>
         <br><br>
       </li>
     <% end %>
