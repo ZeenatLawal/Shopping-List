@@ -1,15 +1,5 @@
+<%= render 'shared/nav' %>
 <h1>Categories</h1>
-<ul class="nav d-flex justify-content-around">
-    <li class="nav-item">
-      <%= link_to 'My Shopping List', items_path %>
-    </li>
-    <li class="nav-item">
-      <%= link_to 'Uncategorized Items', uncategorized_items_path %>
-    </li>
-    <li class="nav-item">
-      <%= link_to 'All Categories', groups_path %>
-    </li>
-</ul>
 <div>
   <ul>
     <% @group.each do |group| %>
@@ -25,6 +15,6 @@
         <br><br>
       </li>
     <% end %>
-    <%= link_to 'New Group', new_group_path %>
+    <%= link_to 'New Category', new_group_path %>
   </ul>
 </div>

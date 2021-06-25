@@ -1,0 +1,17 @@
+<div class="nav-color">
+  <%= link_to root_path do %>
+    <span class="fas fa-bars"></span>
+  <% end %>
+  <h1>Shopping List</h1>
+  <ul class="nav d-flex justify-content-around">
+      <li class="nav-item">
+        <%= link_to 'My Shopping List', items_path %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Uncategorized Items', uncategorized_items_path %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'All Categories', groups_path %>
+      </li>
+  </ul>
+</div>

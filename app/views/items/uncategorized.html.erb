@@ -1,18 +1,5 @@
+<%= render 'shared/nav' %>
 <h1>Items</h1>
-<ul class="nav d-flex justify-content-around">
-    <li class="nav-item">
-      <%= link_to 'My Shopping List', items_path %>
-    </li>
-    <li class="nav-item">
-      <%= link_to 'Uncategorized Items', uncategorized_items_path %>
-    </li>
-    <li class="nav-item">
-      <%= link_to 'All Categories', groups_path %>
-    </li>
-    <%= link_to root_path do %>
-      <span class="fas fa-bars"></span>
-    <% end %>
-</ul>
 <div>
   <ul>
    <h3>Total Amount: </h3>
@@ -29,6 +16,6 @@
         <br><br>
       </li>
     <% end %>
-    <%= link_to 'New Item', new_item_path %>
+    <%= link_to 'New Item', new_item_path, class: "d-flex justify-content-center" %>
   </ul>
 </div>

@@ -1,13 +1,4 @@
 <h1>ShoppingList</h1>
 <% if current_user %>
   <%= render 'profile' %>
-<% else %>
-  <ul>
-    <li class="nav-item">
-      <%= link_to 'Sign in', user_session_path %>
-    </li>
-    <li class="nav-item">
-      <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
-    </li>
-  </ul>
 <% end %>
