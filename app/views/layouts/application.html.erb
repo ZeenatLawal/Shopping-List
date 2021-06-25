@@ -13,8 +13,14 @@
   </head>
 
   <body class="bg-light">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
+    <% if notice %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+    <div class="container mt-5">
+      <%= yield %>
+    </div>
   </body>
 </html>

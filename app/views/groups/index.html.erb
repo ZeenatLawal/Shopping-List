@@ -17,8 +17,9 @@
           <h3>Name: </h3>
           <%= group.name %>
           <br><br>
-          <h4>Icon: </h4>
-          <%= group.icon %>
+          <div class="image">
+            <img src="<%= group.icon %>" class="img-fluid img-thumbnail">
+          </div>
           <h4>Items: </h4>
           <%= group.items.count %>
         <br><br>
