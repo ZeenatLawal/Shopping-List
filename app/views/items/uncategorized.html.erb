@@ -1,4 +1,4 @@
-<h1>Categories</h1>
+<h1>Items</h1>
 <ul class="nav d-flex justify-content-around">
     <li class="nav-item">
       <%= link_to 'My Shopping List', items_path %>
@@ -9,21 +9,26 @@
     <li class="nav-item">
       <%= link_to 'All Categories', groups_path %>
     </li>
+    <%= link_to root_path do %>
+      <span class="fas fa-bars"></span>
+    <% end %>
 </ul>
 <div>
   <ul>
-    <% @group.each do |group| %>
+   <h3>Total Amount: </h3>
+   <%= @amount_sum %>
+   <h3>Total number of items uncategorized: </h3>
+   <%= @uncategorized.count %>
+    <% @uncategorized.each do |uncategorized| %>
       <li class="list-unstyled px-5">
           <h3>Name: </h3>
-          <%= group.name %>
+          <%= uncategorized.name %>
           <br><br>
-          <h4>Icon: </h4>
-          <%= group.icon %>
-          <h4>Items: </h4>
-          <%= group.items.count %>
+          <h4>Amount: </h4>
+          <%= uncategorized.amount %>
         <br><br>
       </li>
     <% end %>
-    <%= link_to 'New Group', new_group_path %>
+    <%= link_to 'New Item', new_item_path %>
   </ul>
 </div>

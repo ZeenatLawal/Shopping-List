@@ -4,7 +4,7 @@
       <%= link_to 'My Shopping List', items_path %>
     </li>
     <li class="nav-item">
-      <%= link_to 'Ungrouped Items', groups_path %>
+      <%= link_to 'Uncategorized Items', uncategorized_items_path %>
     </li>
     <li class="nav-item">
       <%= link_to 'All Categories', groups_path %>
@@ -17,6 +17,8 @@
   <ul>
    <h3>Total Amount: </h3>
    <%= @amount_sum %>
+   <h3>Total number of items on my list: </h3>
+   <%= @item.count %>
     <% @item.each do |item| %>
       <li class="list-unstyled px-5">
           <h3>Name: </h3>

@@ -12,10 +12,14 @@ class ItemsController < ApplicationController
   def create
     @item = current_user.items.build(item_params)
     if @item.save
-      redirect_to :root
+      redirect_to items_path
     else
       redirect_to :new_item, notice: 'Invalid entry'
     end
+  end
+
+  def uncategorized
+    @uncategorized = current_user.items.where(group_id: nil).all
   end
 
   private

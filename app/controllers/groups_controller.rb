@@ -11,7 +11,7 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.build(group_params)
     if @group.save
-      redirect_to :root
+      redirect_to groups_path
     else
       redirect_to :new_group, notice: 'Invalid entry'
     end
