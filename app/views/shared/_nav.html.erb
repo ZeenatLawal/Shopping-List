@@ -1,9 +1,12 @@
-<div class="nav-color">
-  <%= link_to root_path do %>
-    <span class="fas fa-bars"></span>
-  <% end %>
-  <h1>Shopping List</h1>
-  <ul class="nav d-flex justify-content-around">
+<div class="nav-color mt-3">
+  <div class="d-flex justify-content-around align-items-center">
+    <%= link_to root_path do %>
+      <span class="fas fa-bars"></span>
+    <% end %>
+    <h1>Shopping List</h1>
+    <span class="fas fa-search text-primary"></span>
+  </div>
+  <ul class="nav d-flex justify-content-around mt-5">
       <li class="nav-item">
         <%= link_to 'My Shopping List', items_path %>
       </li>

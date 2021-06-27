@@ -1,10 +1,10 @@
 <%= render 'shared/nav' %>
-<h1>Items</h1>
-<div>
+<h3>Items</h3>
+<div class="d-flex">
   <ul>
-   <h3>Total Amount: </h3>
+   <h5>Total Amount: </h5>
    <%= @amount_sum %>
-   <h3>Total number of items on my list: </h3>
+   <h4>Total number of items on my list: </h4>
    <%= @item.count %>
     <% @item.each do |item| %>
       <li class="list-unstyled px-5">
@@ -16,6 +16,6 @@
         <br><br>
       </li>
     <% end %>
-    <%= link_to 'New Item', new_item_path %>
+    <%= link_to 'New Item', new_item_path, class: "d-flex justify-content-center btn btn-primary" %>
   </ul>
 </div>
