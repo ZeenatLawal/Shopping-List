@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :items
   has_many :groups
 
+  mount_uploader :profile_icon, IconUploader
+
   validates :name, presence: true
 
   def self.find_for_database_authentication(warden_condition)

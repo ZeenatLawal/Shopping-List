@@ -2,10 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .image {
-  width: 75px;
-  height: 75px;
-}
-
-.upload{
-  margin: auto;
+  $size: 120px;
+  width: $size;
+  height: $size;
 }

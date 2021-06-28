@@ -1,6 +1,8 @@
 <div>
   <div class="d-flex flex-column align-items-center mt-4">  
-    <%= gravatar_image_tag(current_user.email, alt: 'Profile Picture', class: ' rounded rounded-circle my-4 ') %>
+    <div>
+      <img src="<%= @user.profile_icon %>" class="rounded rounded-circle image">
+    </div>
     <%= @user.name %>
   </div>
   <ul class="nav d-flex flex-column pt-5">
@@ -17,6 +19,11 @@
       <li class="nav-item pb-2">
         <i class="fas fa-layer-group text-primary border border-1 rounded-circle p-2"></i>
         <%= link_to 'All Categories', groups_path, class: "ps-3 text-decoration-none" %>
+        <p class="ms-5 border-bottom pt-2"></p>
+      </li>
+      <li class="nav-item pb-2">
+        <i class="fas fa-user text-primary border border-1 rounded-circle p-2"></i>
+        <%= link_to 'Edit Profile', edit_user_registration_path, class: "ps-3 text-decoration-none" %>
         <p class="ms-5 border-bottom pt-2"></p>
       </li>
       <li class="nav-item">

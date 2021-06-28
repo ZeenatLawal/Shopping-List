@@ -22,10 +22,11 @@
                 hint: "we need your current password to confirm your changes",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
+    <%= f.input :profile_icon,  as: :file, required: false, label: false %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <%= f.button :submit, "Update", class: "btn btn-primary mt-1" %>
   </div>
 <% end %>
 
