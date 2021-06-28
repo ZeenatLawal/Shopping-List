@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
   def index
-    @item = current_user.items.includes(:group)
+    @item = current_user.items.includes(:group).order("created_at DESC")
     @amount_sum = current_user.items.sum(:amount)
   end
 
@@ -19,13 +19,23 @@ class ItemsController < ApplicationController
   end
 
   def uncategorized
-    @uncategorized = current_user.items.where(group_id: nil).all
+    @uncategorized = current_user.items.where(group_id: nil).all.order("created_at DESC")
     @amount_sum = current_user.items.sum(:amount)
+  end
+
+  def destroy
+    item = Item.find_by(id: params[:id])
+    if item
+      item.destroy
+      redirect_to items_path, notice: 'You deleted an item.'
+    else
+      redirect_to items_path, alert: 'You cannot delete this item.'
+    end
   end
 
   private
 
   def item_params
-    params.require(:item).permit(:name, :amount, :group_id)
+    params.require(:item).permit(:name, :amount, :group_id, :created_at)
   end
 end

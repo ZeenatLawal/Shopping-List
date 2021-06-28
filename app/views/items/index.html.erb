@@ -1,21 +1,38 @@
 <%= render 'shared/nav' %>
 <h3>Items</h3>
-<div class="d-flex">
-  <ul>
-   <h5>Total Amount: </h5>
-   <%= @amount_sum %>
-   <h4>Total number of items on my list: </h4>
-   <%= @item.count %>
+<div>
+  <div class="bg-light d-flex justify-content-between p-1 mb-2">
+    <p>Total Amount: </p>
+    <p><b>$</b><%= @amount_sum %></p>
+  </div>
+  <div class="bg-light d-flex justify-content-between p-1">
+    <p>Total number of items on my list: </p>
+    <%= @item.count %>
+  </div>
+  <ul class="list-unstyled d-flex flex-column">
     <% @item.each do |item| %>
-      <li class="list-unstyled px-5">
-          <h3>Name: </h3>
-          <%= item.name %>
-          <br><br>
-          <h4>Amount: </h4>
-          <%= item.amount %>
-        <br><br>
+      <li>
+        <% if item.group_id %>
+          <div class="image">
+            <img src="<%= item.group.icon %>" class="img-fluid img-thumbnail">
+          </div>
+        <% end %>
       </li>
+      <li>
+        <h6>Name: </h6>
+        <%= item.name %>
+      </li>
+      <li>
+        <h6>Amount: </h6>
+        <p><b>$</b><%= item.amount %></p>
+      </li>
+      <li>
+        <h6>Added on: </h6>
+        <p><%= item.created_at.strftime("%d/%m/%Y") %></p>
+      </li>
+      <li><%= link_to 'Remove Item', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %></li>
+      <br><br>
     <% end %>
-    <%= link_to 'New Item', new_item_path, class: "d-flex justify-content-center btn btn-primary" %>
   </ul>
 </div>
+<%= link_to 'New Item', new_item_path, class: "d-flex justify-content-center btn btn-primary position-fixed bottom-0 start-50 translate-middle-x w-75" %>

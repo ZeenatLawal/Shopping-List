@@ -1,25 +1,31 @@
 <%= render 'shared/nav' %>
-<h1>Items</h1>
+<h3>Items</h3>
 <div>
   <div class="bg-light d-flex justify-content-between p-1 mb-2">
     <p>Total Amount: </p>
-    <%= @amount_sum %>
+    <p><b>$</b><%= @amount_sum %></p>
   </div>
   <div class="bg-light d-flex justify-content-between p-1">
-    <p>Total number of items uncategorized: </p>
+    <p>Total number of uncategorized items: </p>
     <%= @uncategorized.count %>
   </div>
-  <ul>
+  <ul class="list-unstyled d-flex flex-column">
     <% @uncategorized.each do |uncategorized| %>
-      <li class="list-unstyled px-5">
-          <h6>Name: </h6>
-          <%= uncategorized.name %>
-          <br><br>
-          <h6>Amount: </h6>
-          <%= uncategorized.amount %>
-        <br><br>
+      <li>
+        <h6>Name: </h6>
+        <%= uncategorized.name %>
       </li>
+      <li>
+        <h6>Amount: </h6>
+        <p><b>$</b><%= uncategorized.amount %></p>
+      </li>
+      <li>
+        <h6>Added on: </h6>
+        <p><%= uncategorized.created_at.strftime("%d/%m/%Y") %></p>
+      </li>
+      <li><%= link_to 'Remove Item', uncategorized, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %></li>
+      <br><br>
     <% end %>
-    <%= link_to 'New Item', new_item_path, class: "d-flex justify-content-center btn btn-primary" %>
   </ul>
 </div>
+<%= link_to 'New Item', new_item_path, class: "d-flex justify-content-center btn btn-primary position-fixed bottom-0 start-50 translate-middle-x w-75" %>
