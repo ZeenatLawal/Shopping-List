@@ -1,0 +1,31 @@
+<%= render 'shared/nav' %>
+<h3>Items in Category</h3>
+<div>
+  <div class="bg-light d-flex justify-content-between p-1">
+    <p>Number of items: </p>
+    <%= @items.count %>
+  </div>
+  <ul class="list-unstyled d-flex flex-column">
+    <% @items.each do |item| %>
+      <div class="image">
+        <img src="<%= @group.icon %>" class="img-thumbnail">
+      </div>
+      <li>
+        <%= item.name %>
+      </li>
+      <li>
+        <p><b>$</b><%= item.amount %></p>
+      </li>
+      <li>
+        <p><%= item.created_at.strftime("%d/%m/%Y") %></p>
+      </li>
+      <li>
+      <% if item.user_id %>
+        <p><%= item.user.name %></p>
+      <% end %>
+      </li>
+      <br><br>
+    <% end %>
+  </ul>
+</div>
+<%= link_to 'Back', groups_path, class: 'btn btn-primary' %>

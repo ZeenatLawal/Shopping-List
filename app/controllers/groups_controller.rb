@@ -1,7 +1,12 @@
 class GroupsController < ApplicationController
 
   def index
-    @group = Group.all
+    @group = Group.all.order('name ASC')
+  end
+
+  def show
+    @group = Group.find(params[:id])
+    @items = current_user.items.where('group_id =?', @group).all
   end
 
   def new
@@ -14,6 +19,16 @@ class GroupsController < ApplicationController
       redirect_to groups_path
     else
       redirect_to :new_group, notice: 'Invalid entry'
+    end
+  end
+
+  def destroy
+    group = current_user.groups.find_by(id: params[:id])
+    if group
+      group.destroy
+      redirect_to groups_path, notice: 'You deleted a group.'
+    else
+      redirect_to groups_path, alert: 'You cannot delete this group.'
     end
   end
 
