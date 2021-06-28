@@ -16,18 +16,19 @@
           <div class="image">
             <img src="<%= item.group.icon %>" class="img-fluid img-thumbnail">
           </div>
+        <% else %>
+          <div class="image">
+            <img src="https://via.placeholder.com/75" class="img-fluid img-thumbnail">
+          </div>
         <% end %>
       </li>
       <li>
-        <h6>Name: </h6>
         <%= item.name %>
       </li>
       <li>
-        <h6>Amount: </h6>
         <p><b>$</b><%= item.amount %></p>
       </li>
       <li>
-        <h6>Added on: </h6>
         <p><%= item.created_at.strftime("%d/%m/%Y") %></p>
       </li>
       <li><%= link_to 'Remove Item', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %></li>

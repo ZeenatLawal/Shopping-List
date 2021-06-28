@@ -1,20 +1,24 @@
 <%= render 'shared/nav' %>
-<h1>Categories</h1>
+<h3>Categories</h3>
 <div>
-  <ul>
+  <div class="bg-light d-flex justify-content-between p-1">
+    <p>Number of categories: </p>
+    <%= @group.count %>
+  </div>
+  <ul class="list-unstyled d-flex flex-column">
     <% @group.each do |group| %>
-      <li class="list-unstyled px-5">
-          <h6>Name: </h6>
-          <%= group.name %>
-          <br><br>
-          <div class="image">
-            <img src="<%= group.icon %>" class="img-fluid img-thumbnail">
-          </div>
-          <h6>Items: </h6>
-          <%= group.items.count %>
-        <br><br>
+        <div class="image">
+          <img src="<%= group.icon %>" class="img-thumbnail">
+        </div>
+      <li>
+        <%= link_to group.name, group_path(group.id) %>
       </li>
+      <li>
+        <p><%= group.created_at.strftime("%d/%m/%Y") %></p>
+      </li>
+      <li><%= link_to 'Remove Group', group, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %></li>
+      <br><br>
     <% end %>
-    <%= link_to 'New Category', new_group_path, class: "d-flex justify-content-center btn btn-primary" %>
   </ul>
 </div>
+<%= link_to 'New Category', new_group_path, class: "d-flex justify-content-center btn btn-primary position-fixed bottom-0 start-50 translate-middle-x w-75" %>
