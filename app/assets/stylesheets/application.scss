@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+ .image {
+  $size: 120px;
+  width: $size;
+  height: $size;
+}
+
+.text {
+  font-size: 12px;
+}

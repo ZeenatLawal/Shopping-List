@@ -1,24 +1,28 @@
 <%= render 'shared/nav' %>
 <h3>Categories</h3>
-<div>
-  <div class="bg-light d-flex justify-content-between p-1">
+<div class="pb-3">
+  <div class="bg-light d-flex justify-content-between p-1 mb-2">
     <p>Number of categories: </p>
     <%= @group.count %>
   </div>
-  <ul class="list-unstyled d-flex flex-column">
+  <div class="list-group">
     <% @group.each do |group| %>
-        <div class="image">
-          <img src="<%= group.icon %>" class="img-thumbnail">
+      <div class="list-group-item d-flex justify-content-between mt-2">
+        <div class="d-flex">
+          <div>
+            <img src="<%= group.icon %>" class="image img-thumbnail">
+          </div>
+          <div class="ms-3 mt-3">
+            <p class="py-3"><%= link_to group.name, group_path(group.id) %></p>
+            <span class="text"><%= group.created_at.strftime("%d %b %Y") %></span>
+          </div>
+          </div>
+          <div class="pt-5">
+            <%= link_to 'Remove Group', group, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-sm" %>
+          </div>
         </div>
-      <li>
-        <%= link_to group.name, group_path(group.id) %>
-      </li>
-      <li>
-        <p><%= group.created_at.strftime("%d/%m/%Y") %></p>
-      </li>
-      <li><%= link_to 'Remove Group', group, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %></li>
-      <br><br>
+      </div><br>
     <% end %>
-  </ul>
+    </div>
 </div>
 <%= link_to 'New Category', new_group_path, class: "d-flex justify-content-center btn btn-primary position-fixed bottom-0 start-50 translate-middle-x w-75" %>
