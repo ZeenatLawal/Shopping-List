@@ -1,20 +1,20 @@
-<div class="nav-color mt-3">
-  <div class="d-flex justify-content-around align-items-center">
+<div class="nav-color">
+  <div class="d-flex justify-content-between mx-4 pt-4">
     <%= link_to root_path do %>
-      <span class="fas fa-bars"></span>
+      <span class="fas fa-bars text-light"></span>
     <% end %>
-    <h1>Shopping List</h1>
-    <span class="fas fa-search text-primary"></span>
+    <h1 class="text-light">Shopping List</h1>
+    <span class="fas fa-search text-light"></span>
   </div>
-  <ul class="nav d-flex justify-content-around mt-4">
+  <ul class="nav d-flex justify-content-between mt-4 mx-4">
       <li class="nav-item">
-        <%= link_to 'My Shopping List', items_path %>
+        <%= link_to 'My Shopping List', items_path, class: "text-decoration-none text-light" %>
       </li>
       <li class="nav-item">
-        <%= link_to 'Uncategorized Items', uncategorized_items_path %>
+        <%= link_to 'Uncategorized Items', uncategorized_items_path, class: "text-decoration-none text-light" %>
       </li>
       <li class="nav-item">
-        <%= link_to 'All Categories', groups_path %>
+        <%= link_to 'All Categories', groups_path, class: "text-decoration-none text-light" %>
       </li>
   </ul>
 </div>

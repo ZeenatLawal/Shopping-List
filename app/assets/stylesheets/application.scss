@@ -22,3 +22,30 @@
 .text {
   font-size: 12px;
 }
+
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  background-attachment:fixed;
+  background-color: #2D639F;
+  background-image:
+    linear-gradient(
+      45deg, 
+      #3678C2, #2D639F
+    );
+}
+
+.nav-color {
+  background-attachment:fixed;
+  background-color: #2D639F;
+  background-image:
+    linear-gradient(
+      45deg, 
+      #2D639F, #3678C2
+    );
+}
+
+.bg-color {
+  background-color: #F8F9FA;
+}
