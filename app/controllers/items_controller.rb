@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
   def index
-    @item = current_user.items
+    @item = current_user.items.includes(:group)
     @amount_sum = current_user.items.sum(:amount)
   end
 
@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
 
   def uncategorized
     @uncategorized = current_user.items.where(group_id: nil).all
+    @amount_sum = current_user.items.sum(:amount)
   end
 
   private

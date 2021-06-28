@@ -4,13 +4,13 @@
   <ul>
     <% @group.each do |group| %>
       <li class="list-unstyled px-5">
-          <h3>Name: </h3>
+          <h6>Name: </h6>
           <%= group.name %>
           <br><br>
           <div class="image">
             <img src="<%= group.icon %>" class="img-fluid img-thumbnail">
           </div>
-          <h4>Items: </h4>
+          <h6>Items: </h6>
           <%= group.items.count %>
         <br><br>
       </li>
