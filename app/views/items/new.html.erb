@@ -2,19 +2,6 @@
 <div class="d-flex align-items-center text-center py-2">
   <div class="w-100 m-auto m-md-5 px-3 px-md-5">  
     <h2 class="h3 mb-4 fw-bold">New Item</h2>
-    <%= simple_form_for @item do |f| %>
-      <div class="mb-3 mx-md-5">
-        <%= f.input :name, required: false, autofocus: true %>
-      </div>
-      <div class="mb-4 mx-md-5">
-        <%= f.input :amount, required: false %>
-      </div>
-      <div class="mb-4 mx-md-5">
-        <%= f.association :group, collection: Group.order(:name), prompt: "Choose a Category" %>
-      </div>
-      <div class="btn btn-primary">
-        <%= f.button :submit, "Add Item", class: "text-light fw-normal" %>
-      </div>
-    <% end %>
+    <%= render 'form', item: @item %>
   </div>
 </div>
