@@ -1,6 +1,6 @@
 # Shopping List App
 
-> This is a shopping list app that allow users create their shopping list and add items to a group(category) they desire and also add items they don't want grouped separately.
+> This is a shopping list app that allows users to create their shopping list and add items to a group(category) they desire and also add items they don't want to be grouped separately.
 
 ## Built With
 
