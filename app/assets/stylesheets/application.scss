@@ -13,8 +13,9 @@
  *= require_tree .
  *= require_self
  */
- .image {
+.image {
   $size: 120px;
+
   width: $size;
   height: $size;
 }
@@ -24,36 +25,38 @@
 }
 
 .bg-profile {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   height: 100vh;
-  background-attachment:fixed;
-  background-color: #2D639F;
+  background-attachment: fixed;
+  background-color: #2d639f;
   background-image:
     linear-gradient(
-      45deg, 
-      #3678C2, #2D639F
+      45deg,
+      #3678c2,
+      #2d639f
     );
 }
 
 .nav-color {
-  background-attachment:fixed;
-  background-color: #2D639F;
+  background-attachment: fixed;
+  background-color: #2d639f;
   background-image:
     linear-gradient(
-      45deg, 
-      #2D639F, #3678C2
+      45deg,
+      #2d639f,
+      #3678c2
     );
 }
 
 body {
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
 }
 
 .btn-devise {
-  background-color: #3979C3;
+  background-color: #3979c3;
 }
 
 .btn-new {
-  background-color: #60B524;
+  background-color: #60b524;
 }
