@@ -1,5 +1,5 @@
 require 'active_support/core_ext/integer/time'
-
+# rubocop:disable Metrics/BlockLength
 Rails.application.configure do
   config.after_initialize do
     Bullet.enable = true
@@ -94,3 +94,5 @@ Rails.application.configure do
     Bullet.add_footer = true
   end
 end
+
+# rubocop:enable Metrics/BlockLength
