@@ -1,11 +1,12 @@
+<div class="bg-profile">
 <div class="container">
-  <div class="d-flex flex-column align-items-center mt-4">  
+  <div class="d-flex flex-column align-items-center pt-4">  
     <div>
       <img src="<%= @user.profile_icon %>" class="rounded rounded-circle image">
     </div>
-    <%= @user.name %>
+    <h3><%= @user.name %></h3>
   </div>
-  <ul class="nav d-flex flex-column pt-5">
+  <ul class="nav d-flex flex-column pt-4">
       <li class="nav-item pb-2">
         <i class="fas fa-shopping-basket text-light border border-1 rounded-circle p-2"></i>
         <%= link_to 'My Shopping List', items_path, class: "ps-2 text-decoration-none text-light" %>
@@ -32,4 +33,5 @@
         <p class="ms-5 border-bottom pt-2"></p>
       </li>
   </ul>
+</div>
 </div>

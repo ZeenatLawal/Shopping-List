@@ -8,7 +8,7 @@
       <div class="mb-4 mx-md-5">
         <%= f.association :group, collection: Group.order(:name), prompt: "Choose a Category" %>
       </div>
-      <div class="btn btn-primary">
+      <div class="btn btn-devise text-light">
         <%= f.button :submit, "Add Item", class: "text-light fw-normal" %>
       </div>
 <% end %>

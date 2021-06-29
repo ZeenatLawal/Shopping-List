@@ -1,43 +1,45 @@
 <%= render 'shared/nav' %>
-<h3>Items in Category</h3>
-<div class="pb-3">
-  <div class="bg-light d-flex justify-content-between p-1 mb-2">
-    <p>Number of items: </p>
-    <%= @items.count %>
-  </div>
-  <div class="list-group">
-    <% @items.includes([:group]).each do |item| %>
-      <div class="list-group-item d-flex justify-content-between mt-2">
-        <div class="d-flex">
-          <% if item.group_id %>
-            <div>
-              <img src="<%= item.group.icon %>" class="image img-thumbnail">
-            </div>
-          <% else %>
-            <div>
-              <img src="https://via.placeholder.com/120" class="img-thumbnail">
-            </div>
-          <% end %>
-        <div class="ms-3 mt-3">
-          <p><%= item.name %></p>
-          <div>
-            <% if item.user_id %>
-              <p>Added by: <%= item.user.name %></p>
+<div class="px-3 pt-2">
+  <h3>Items in Category</h3>
+  <div class="pb-3">
+    <div class="bg-light d-flex justify-content-between p-1 mb-2">
+      <p>Number of items: </p>
+      <%= @items.count %>
+    </div>
+    <div class="list-group">
+      <% @items.includes([:group]).each do |item| %>
+        <div class="list-group-item d-flex justify-content-between mt-2">
+          <div class="d-flex">
+            <% if item.group_id %>
+              <div>
+                <img src="<%= item.group.icon %>" class="image img-thumbnail">
+              </div>
+            <% else %>
+              <div>
+                <img src="https://via.placeholder.com/120" class="img-thumbnail">
+              </div>
             <% end %>
+          <div class="ms-3 mt-3">
+            <p><%= item.name %></p>
+            <div>
+              <% if item.user_id %>
+                <p>Added by: <%= item.user.name %></p>
+              <% end %>
+            </div>
+            <span class="text"><%= item.created_at.strftime("%d %b %Y") %></span>
           </div>
-          <span class="text"><%= item.created_at.strftime("%d %b %Y") %></span>
-        </div>
-        </div>
-        <div class="text-end">
-          <p class="py-3"><b>$<%= item.amount %></b></p>
-          <div>
-            <%= link_to 'Remove Item', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-sm" %>
           </div>
-        </div>
-      </div><br>
-    <% end %>
+          <div class="text-end">
+            <p class="py-3"><b>$<%= item.amount %></b></p>
+            <div>
+              <%= link_to 'Remove Item', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-devise text-light btn-sm" %>
+            </div>
+          </div>
+        </div><br>
+      <% end %>
+    </div>
   </div>
-</div>
-<div class="d-flex justify-content-center">
-  <%= link_to 'Back', groups_path, class: 'btn btn-primary' %>
+  <div class="d-flex justify-content-center">
+    <%= link_to 'Back', groups_path, class: 'btn btn-devise text-light' %>
+  </div>
 </div>

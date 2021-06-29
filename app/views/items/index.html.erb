@@ -1,5 +1,5 @@
 <%= render 'shared/nav' %>
-<div class="bg-color">
+<div class="px-3 pt-2">
   <h3>Items</h3>
   <div class="pb-3">
     <div class="bg-white d-flex justify-content-between p-1 mb-2">
@@ -31,12 +31,12 @@
           <div class="text-end">
             <p class="py-3"><b>$<%= item.amount %></b></p>
             <div>
-              <%= link_to 'Remove Item', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-sm" %>
+              <%= link_to 'Remove Item', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-devise text-light btn-sm" %>
             </div>
           </div>
         </div><br>
       <% end %>
       </div>
   </div>
-  <%= link_to 'New Item', new_item_path, class: "d-flex justify-content-center btn btn-primary position-fixed bottom-0 start-50 translate-middle-x w-75" %>
+  <%= link_to 'New Item', new_item_path, class: "d-flex justify-content-center btn btn-new text-light p-2 position-fixed bottom-0 start-50 translate-middle-x w-75" %>
 </div>

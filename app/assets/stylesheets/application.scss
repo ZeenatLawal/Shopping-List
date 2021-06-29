@@ -23,10 +23,10 @@
   font-size: 12px;
 }
 
-body {
+.bg-profile {
   margin: 0px;
   padding: 0px;
-  height: 100%;
+  height: 100vh;
   background-attachment:fixed;
   background-color: #2D639F;
   background-image:
@@ -46,16 +46,14 @@ body {
     );
 }
 
-.bg-color {
+body {
   background-color: #F8F9FA;
-  height: 80vh;
-}
-
-.bg-devise {
-  background-color: #F8F9FA;
-  height: 100vh;
 }
 
 .btn-devise {
   background-color: #3979C3;
+}
+
+.btn-new {
+  background-color: #60B524;
 }
