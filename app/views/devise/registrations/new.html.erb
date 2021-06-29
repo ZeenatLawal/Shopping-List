@@ -1,4 +1,4 @@
-<div class="d-flex align-items-center text-center py-2">
+<div class="d-flex align-items-center text-center py-2 bg-devise">
   <div class="w-100 m-auto m-md-5 px-3 px-md-5">  
     <h1 class="h3 mb-2 fw-bold">Please sign up</h1>
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -22,7 +22,7 @@
         <%= f.label :profile_icon, "Upload profile image", class: "mb-1" %>
         <%= f.input :profile_icon,  as: :file, required: false, label: false %>
       </div>
-      <div class="btn btn-primary">
+      <div class="btn btn-devise">
         <%= f.button :submit, "Sign up", class: "text-light fw-normal" %>
       </div>
     <% end %>

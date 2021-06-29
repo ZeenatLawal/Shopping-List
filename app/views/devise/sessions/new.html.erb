@@ -1,4 +1,4 @@
-<div class="d-flex align-items-center text-center py-2">
+<div class="d-flex align-items-center text-center py-2 bg-devise">
   <div class="w-100 m-auto m-md-5 px-3 px-md-5">  
     <h1 class="h3 mb-4 fw-bold">Please sign in</h1>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -11,7 +11,7 @@
       <div class="checkbox mb-3 mx-5 px-4 px-md-5">
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
-      <div class="btn btn-primary">
+      <div class="btn btn-devise">
         <%= f.button :submit, "Sign in", class: "text-light fw-normal" %>
       </div>
     <% end %>
