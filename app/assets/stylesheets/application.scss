@@ -13,3 +13,50 @@
  *= require_tree .
  *= require_self
  */
+.image {
+  $size: 120px;
+
+  width: $size;
+  height: $size;
+}
+
+.text {
+  font-size: 12px;
+}
+
+.bg-profile {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-attachment: fixed;
+  background-color: #2d639f;
+  background-image:
+    linear-gradient(
+      45deg,
+      #3678c2,
+      #2d639f
+    );
+}
+
+.nav-color {
+  background-attachment: fixed;
+  background-color: #2d639f;
+  background-image:
+    linear-gradient(
+      45deg,
+      #2d639f,
+      #3678c2
+    );
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.btn-devise {
+  background-color: #3979c3;
+}
+
+.btn-new {
+  background-color: #60b524;
+}

@@ -1,0 +1,20 @@
+<div class="nav-color">
+  <div class="d-flex justify-content-between mx-4 pt-4 align-items-center">
+    <%= link_to root_path do %>
+      <span class="fas fa-bars text-light ms-md-5"></span>
+    <% end %>
+    <h1 class="text-light">Shopping List</h1>
+    <span class="fas fa-search text-light me-md-5"></span>
+  </div>
+  <ul class="nav d-flex justify-content-around mt-4 mx-4 pb-2">
+      <li class="nav-item">
+        <%= link_to 'My Shopping List', items_path, class: "text-decoration-none text-light" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Uncategorized Items', uncategorized_items_path, class: "text-decoration-none text-light" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'All Categories', groups_path, class: "text-decoration-none text-light" %>
+      </li>
+  </ul>
+</div>

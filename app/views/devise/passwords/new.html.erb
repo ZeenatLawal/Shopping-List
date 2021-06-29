@@ -1,0 +1,16 @@
+<div class="d-flex align-items-center text-center py-2 bg-devise">
+  <div class="w-100 m-auto m-md-5 px-3 px-md-5">  
+    <h1 class="h3 mb-4 fw-bold">Forgot your password?</h1>
+    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= f.error_notification %>
+      <div class="mb-3 mx-md-5">
+        <%= f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email" }, class: "form-control" %>
+      </div>
+      <div class="form-actions">
+        <%= f.button :submit, "Send me reset password instructions" %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

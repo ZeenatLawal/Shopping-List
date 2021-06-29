@@ -1,0 +1,30 @@
+<%= render 'shared/nav' %>
+<div class="bg-white d-flex justify-content-between p-1 mb-1">
+  <p>Number of categories: </p>
+  <%= @group.count %>
+</div>
+<div class="px-3 pt-2">
+  <h3>Categories</h3>
+  <div class="pb-3">
+    <div class="list-group">
+      <% @group.each do |group| %>
+        <div class="list-group-item d-flex justify-content-between mt-2">
+          <div class="d-flex">
+            <div>
+              <img src="<%= group.icon %>" class="image img-thumbnail">
+            </div>
+            <div class="ms-3 mt-3">
+              <p class="py-3"><%= link_to group.name, group_path(group.id) %></p>
+              <span class="text"><%= group.created_at.strftime("%d %b %Y") %></span>
+            </div>
+            </div>
+            <div class="pt-5">
+              <%= link_to 'Remove Category', group, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-devise text-light btn-sm" %>
+            </div>
+          </div>
+        </div><br>
+      <% end %>
+      </div>
+  </div>
+  <%= link_to 'New Category', new_group_path, class: "d-flex justify-content-center btn btn-new text-light p-2 position-fixed bottom-0 start-50 translate-middle-x w-75" %>
+</div>
