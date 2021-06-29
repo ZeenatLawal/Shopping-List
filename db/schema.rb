@@ -11,7 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 # rubocop:disable Metrics/BlockLength
 ActiveRecord::Schema.define(version: 20_210_628_132_629) do
-# rubocop:enable Metrics/BlockLength
+  # rubocop:enable Metrics/BlockLength
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
