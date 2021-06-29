@@ -9,7 +9,7 @@
 
 ## Live Demo
 
-[Visit Our Website]()
+[Visit the Website](https://still-spire-69869.herokuapp.com/)
 
 
 ## Getting Started
@@ -66,7 +66,7 @@ Open `http://localhost:3000/` in your browser.
 ### Deployment
 
 > The app was deployed to Heroku
-[Visit Our Website]()
+[Visit the Website](https://still-spire-69869.herokuapp.com/)
 
 ## Author
 
@@ -80,7 +80,7 @@ Open `http://localhost:3000/` in your browser.
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/ZeenatLawal/Shopping-List/issues).
 
 ## Show your support
 
@@ -88,4 +88,5 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- [Safa Aballagh](https://github.com/safafa)
 - Standup Team

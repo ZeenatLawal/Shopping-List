@@ -1,6 +1,6 @@
 class Group < ApplicationRecord
   belongs_to :user
-  has_many :items
+  has_many :items, dependent: :destroy
 
   mount_uploader :icon, IconUploader
 
