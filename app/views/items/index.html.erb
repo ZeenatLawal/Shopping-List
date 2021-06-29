@@ -1,15 +1,15 @@
 <%= render 'shared/nav' %>
+<div class="bg-white d-flex justify-content-between p-1 mb-1">
+  <p>Total Amount: </p>
+  <p><b>$<%= @amount_sum %></b></p>
+</div>
+<div class="bg-white d-flex justify-content-between p-1">
+  <p>Total number of items on my list: </p>
+  <%= @item.count %>
+</div>
 <div class="px-3 pt-2">
   <h3>Items</h3>
   <div class="pb-3">
-    <div class="bg-white d-flex justify-content-between p-1 mb-2">
-      <p>Total Amount: </p>
-      <p><b>$<%= @amount_sum %></b></p>
-    </div>
-    <div class="bg-light d-flex justify-content-between p-1">
-      <p>Total number of items on my list: </p>
-      <%= @item.count %>
-    </div>
     <div class="list-group">
       <% @item.each do |item| %>
         <div class="list-group-item d-flex justify-content-between mt-2">
