@@ -2,8 +2,11 @@
 
 > This is a shopping list app that allows users to create their shopping list and add items to a group(category) they desire and also add items they don't want to be grouped separately.
 
-![screenshot](.\app\assets\images\profile.png)
-![screenshot](.\app\assets\images\Categories.png)
+# User Profile
+![screenshot](./app/assets/images/profile.png)
+
+# Categories Page
+![screenshot](./app/assets/images/Categories.png)
 
 ## Built With
 
