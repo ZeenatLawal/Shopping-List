@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @items = current_user.items.where('group_id =?', @group).all
+    @items = current_user.items.where('group_id =?', @group).all.order("created_at DESC")
   end
 
   def new
