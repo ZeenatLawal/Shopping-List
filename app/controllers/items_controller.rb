@@ -1,7 +1,6 @@
 class ItemsController < ApplicationController
-
   def index
-    @item = current_user.items.includes(:group).order("created_at DESC")
+    @item = current_user.items.includes(:group).order('created_at DESC')
     @amount_sum = current_user.items.sum(:amount)
   end
 
@@ -19,7 +18,7 @@ class ItemsController < ApplicationController
   end
 
   def uncategorized
-    @uncategorized = current_user.items.where(group_id: nil).all.order("created_at DESC")
+    @uncategorized = current_user.items.where(group_id: nil).all.order('created_at DESC')
     @amount_sum = current_user.items.sum(:amount)
   end
 

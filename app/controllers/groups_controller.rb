@@ -1,12 +1,11 @@
 class GroupsController < ApplicationController
-
   def index
     @group = Group.all.order('name ASC')
   end
 
   def show
     @group = Group.find(params[:id])
-    @items = current_user.items.where('group_id =?', @group).all.order("created_at DESC")
+    @items = current_user.items.where('group_id =?', @group).all.order('created_at DESC')
   end
 
   def new

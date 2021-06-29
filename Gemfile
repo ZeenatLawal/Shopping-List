@@ -27,10 +27,10 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'carrierwave', '~> 2.2', '>= 2.2.2'
 gem 'devise', '~> 4.8'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'simple_form', '~> 5.1'
-gem 'carrierwave', '~> 2.2', '>= 2.2.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -45,8 +45,8 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
-  gem 'rack-mini-profiler', '~> 2.0'
   gem 'bullet', '~> 6.1', '>= 6.1.4'
+  gem 'rack-mini-profiler', '~> 2.0'
 end
 
 group :test do
