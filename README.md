@@ -2,10 +2,10 @@
 
 > This is a shopping list app that allows users to create their shopping list and add items to a group(category) they desire and also add items they don't want to be grouped separately.
 
-# User Profile
+### User Profile
 ![screenshot](./app/assets/images/profile.png)
 
-# Categories Page
+### Categories Page
 ![screenshot](./app/assets/images/Categories.png)
 
 ## Built With
@@ -96,3 +96,4 @@ Give a ⭐️ if you like this project!
 
 - [Safa Aballagh](https://github.com/safafa)
 - Standup Team
+- [Gregoire Vella](https://www.behance.net/gregoirevella) (Project Design from [Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=))
