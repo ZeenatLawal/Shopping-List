@@ -6,7 +6,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :items, :foreign_key => 'author_id'
+  has_many :items, foreign_key: 'author_id'
   has_many :groups
 
   mount_uploader :profile_icon, IconUploader
