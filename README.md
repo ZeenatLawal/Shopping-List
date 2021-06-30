@@ -20,7 +20,12 @@
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+### To get a local copy up and running follow these simple example steps:
+
+- [Copy this link](git@github.com:ZeenatLawal/Shopping-List.git)
+- Open your terminal or command line
+- Run `git clone` and Paste the link
+- Open the folder with your code editor
 
 ### Prerequisites
 
@@ -30,7 +35,7 @@ Postgres: >=9.5
 
 ### Setup
 
-Instal gems with:
+Install gems with:
 
 ```
 bundle install
@@ -43,15 +48,11 @@ Setup database with:
    rails db:migrate
 ```
 
-### Github Actions
+Install webpacker with:
 
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
-
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
-
+```
+    rails webpacker:install
+```
 
 ### Usage
 
