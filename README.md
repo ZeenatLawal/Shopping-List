@@ -22,7 +22,7 @@
 
 ### To get a local copy up and running follow these simple example steps:
 
-- [Copy this link](git@github.com:ZeenatLawal/Shopping-List.git)
+- [Copy this link](https://github.com/ZeenatLawal/Shopping-List.git)
 - Open your terminal or command line
 - Run `git clone` and Paste the link
 - Open the folder with your code editor
