@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[Visit the Website](https://still-spire-69869.herokuapp.com/)
+[Visit the Website](https://shopping-list-zee.herokuapp.com/)
 
 
 ## Getting Started
@@ -73,7 +73,7 @@ Open `http://localhost:3000/` in your browser.
 ### Deployment
 
 > The app was deployed to Heroku
-[Visit the Website](https://still-spire-69869.herokuapp.com/)
+[Visit the Website](https://shopping-list-zee.herokuapp.com/)
 
 ## Author
 
